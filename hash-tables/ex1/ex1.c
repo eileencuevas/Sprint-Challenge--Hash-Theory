@@ -34,10 +34,11 @@ Answer *get_indices_of_item_weights(int *weights, int length, int limit)
         result->index_1 = i;
         result->index_2 = other_index;
       }
+      destroy_hash_table(ht);
       return result;
     }
   }
-
+  destroy_hash_table(ht);
   return NULL;
 }
 
